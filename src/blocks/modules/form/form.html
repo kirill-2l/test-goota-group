@@ -1,0 +1,79 @@
+<section class="sc sc-form">
+  <div class="container">
+    <div class="form-block" id="form">
+      <div class="form-block__success" v-if="submitStatus === 'OK'">
+        <div class="form-block__success-block">
+          <svg class="form-block__success-icon">
+            <use href="img/sprites/sprite.svg#done"></use>
+          </svg>
+          <div class="form-block__success-name">{{$v.name.$model}}</div>
+          <div class="form-block__success-text">Благодарим за подписку!</div>
+        </div>
+
+
+      </div>
+      <div class="form-block__wrapper">
+        <div class="form-block__rss">
+          <svg class="form-block__rss-icon">
+            <use href="img/sprites/sprite.svg#RSS"></use>
+          </svg>
+        </div>
+        <div class="form-block__title">подпишитесь на рассылку</div>
+        <form class="form" @submit.prevent="submit">
+        <div class="form__row">
+          <div
+            class="form__group"
+            :class="{ 'form__group--error': $v.name.$error }"
+          >
+            <div class="error" v-if="!$v.name.required">Заполните поле</div>
+            <input
+              class="form__field form__input"
+              v-model.trim="$v.name.$model"
+              placeholder="Имя"
+            />
+          </div>
+
+          <div
+            class="form__group"
+            :class="{ 'form__group--error': $v.email.$error }"
+          >
+            <div class="error" v-if="!$v.email.required">
+              Заполните поле
+            </div>
+            <div class="error" v-if="!$v.email.email">
+              Неверный формат email
+            </div>
+            <input
+              class="form__field form__input"
+              v-model.trim.lazy="$v.email.$model"
+              placeholder="example@mail.com"
+            />
+          </div>
+        </div>
+        <div
+          class="form__group"
+          :class="{ 'form__group--error': $v.message.$error }"
+        >
+          <div class="error" v-if="!$v.message.required">Заполните поле</div>
+          <textarea
+            class="form__field form__textarea"
+            v-model.trim.lazy="$v.message.$model"
+            placeholder="Комментарии"
+          ></textarea>
+
+        </div>
+        <div class="form__submit">
+          <button
+            class="form__submit-btn"
+            type="submit"
+            :disabled="submitStatus === 'PENDING'"
+          >
+            подписаться
+          </button>
+
+        </div>
+        <!-- <pre>{{ $v }}</pre> -->
+      </div>
+    </div>
+  </div>
+</section>

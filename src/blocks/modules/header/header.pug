@@ -1,0 +1,15 @@
+header.header
+  .container.header__container
+    .header__wrapper
+
+      .header__inner
+        .header__logo
+          +logo()
+        .header__menu
+          include ../d-menu/d-menu
+        .header__authentication
+          a(href="#").header__authentication-link #[strong Регистрация]
+          a(href="#").header__authentication-link #[strong Вход]
+        .header__hamburger
+          +hamburger()
+      span.header__wrapper-line

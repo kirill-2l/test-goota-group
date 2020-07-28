@@ -1,0 +1,35 @@
+mixin item(num)
+  a(href="#").news__item
+    .news__visual(style=`background-image: url(img/content/news/img_${num}.jpg)`)
+      .news__visual-num=num
+
+section.sc.sc-news
+  .container
+    .news
+      .news__header
+        +title('новости')
+        a(href="#").news__link Все новости
+
+      .news__list
+        .news__chunk.news__chunk--active
+          .news__split
+            +item(1)
+            +item(2)
+          .news__full-width
+            +item(3)
+        .news__chunk
+          .news__split
+            +item(1)
+            +item(2)
+          .news__full-width
+            +item(3)
+        .news__chunk
+          .news__split
+            +item(1)
+            +item(2)
+          .news__full-width
+            +item(3)
+
+        //- +item(4)
+
+      button.news__more-btn Показать еще

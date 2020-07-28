@@ -1,0 +1,13 @@
+.logo {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    @media screen and (min-width: $landscape) {
+        font-size: 1.5rem;
+    }
+    @media screen and (min-width: $desktop) {
+        font-size: rem(20);
+    }
+}

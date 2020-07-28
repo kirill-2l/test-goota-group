@@ -1,0 +1,41 @@
+mixin submenu()
+  .d-menu__submenu
+    .d-menu__submenu-wrapper
+      ul.d-menu__submenu-list
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+      ul.d-menu__submenu-list
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+      ul.d-menu__submenu-list
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+      ul.d-menu__submenu-list
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+      ul.d-menu__submenu-list
+        li.d-menu__submenu-item
+          a(href="#").d-menu__submenu-link Меню
+.d-menu
+  ul.d-menu__list
+    li.d-menu__item
+      a(href="#").d-menu__link Меню
+      +submenu()
+    li.d-menu__item
+      a(href="#").d-menu__link Меню
+      +submenu()
+    li.d-menu__item
+      a(href="#").d-menu__link Меню
+    li.d-menu__item
+      a(href="#").d-menu__link Меню
+    li.d-menu__item
+      a(href="#").d-menu__link Меню
+    li.d-menu__item
+      a(href="#").d-menu__link Меню
+      +submenu()

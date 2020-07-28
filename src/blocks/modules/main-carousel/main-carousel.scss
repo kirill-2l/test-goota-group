@@ -1,0 +1,146 @@
+.main-carousel {
+    position: relative;
+    @media screen and (min-width: $desktop) {
+        &__navigation {
+            bottom: 50px;
+        }
+    }
+    .glide {
+        @media screen and (min-width: $desktop) {
+            &__slide {
+                min-height: 600px;
+            }
+            &__arrow {
+                width: 32px;
+                height: 22px;
+            }
+            &__bullets {
+                margin: 0 -15px;
+            }
+            &__bullet {
+                width: 70px;
+                margin: 0 15px;
+            }
+        }
+        &__slides {
+            display: flex;
+            min-height: 240px;
+        }
+        &__slide {
+            position: relative;
+            height: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 45% 20%;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.45);
+            }
+        }
+        &__arrows {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__arrow {
+            box-sizing: content-box;
+            width: 18px;
+            height: 15px;
+            padding: 5px;
+            transition: fill linear 0.3s;
+            fill: #fff;
+            cursor: pointer;
+            &:hover, &:active, &:focus {
+                fill: $blue;
+            }
+        }
+        &__bullets {
+            display: inline-flex;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin: 0 -12px;
+            transform: translateX(-50%);
+        }
+        &__bullet {
+            display: flex;
+            width: 30px;
+            margin: 0 12px;
+            padding-top: 5px;
+            border: none;
+            border-bottom: 2px solid $lightGray;
+            background-color: transparent;
+            transition: border-bottom linear 0.15s;
+            cursor: pointer;
+            &.glide__bullet--active {
+                border-bottom: 2px solid $blue;
+            }
+        }
+    }
+    &__navigation {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 100%;
+        padding: 0 10px;
+        transform: translateX(-50%);
+    }
+}
+.main-slide {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 30px 0;
+    color: #fff;
+    @media screen and (min-width: $landscape) {
+        max-width: 80%;
+    }
+    @media screen and (min-width: $desktop) {
+        max-width: 780px;
+        padding: 115px 0 75px;
+        &__badge {
+            font-size: rem(14);
+        }
+        &__header {
+            margin-top: 30px;
+        }
+        &__title {
+            font-size: rem(46);
+        }
+        &__description {
+            max-width: 85%;
+            margin-top: 20px;
+            font-size: rem(24);
+        }
+    }
+    &__badge {
+        display: block;
+        min-width: 75px;
+        padding: 7px 10px;
+        background-color: $blue;
+        &-text {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+    &__header {
+        margin-top: 15px;
+    }
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__description {
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+}

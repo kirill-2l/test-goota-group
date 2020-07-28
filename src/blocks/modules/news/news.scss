@@ -1,0 +1,101 @@
+.news {
+    @media screen and (min-width: $tablet) {
+        &__item {
+            height: 300px;
+            margin-bottom: 30px;
+        }
+        &__split {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin: 0 -15px;
+            & > .news__item {
+                width: calc((100% / 2) - 30px);
+                margin: 0 15px 30px;
+            }
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        &__link {
+            display: block;
+        }
+        &__header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        &__list {
+            margin-top: 30px;
+        }
+        &__visual {
+            &-num {
+                font-size: rem(161);
+            }
+        }
+    }
+    &__list {
+        margin-top: 20px;
+    }
+    &__chunk {
+        display: none;
+        &.news__chunk--active {
+            display: block;
+            animation: showNews 0.4s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
+    &__link {
+        display: none;
+    }
+    &__split {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+    &__item {
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    &__visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.46);
+        }
+        &-num {
+            z-index: $newsVisual;
+            font-weight: 700;
+            font-size: 9.5rem;
+            color: $lightGray;
+            opacity: 0.6;
+        }
+    }
+    &__more-btn {
+        display: block;
+        margin: 20px auto 0;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+@keyframes showNews {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

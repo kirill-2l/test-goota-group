@@ -1,0 +1,14 @@
+.sc {
+  margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 80px;
+  }
+  &.sc-main-carousel {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    &.sc-main-carousel {
+      margin-bottom: 70px;
+    }
+  }
+}

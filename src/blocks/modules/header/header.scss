@@ -1,0 +1,74 @@
+.header {
+    position: sticky;
+    z-index: $header;
+    top: 0;
+    height: 70px;
+    background-color: #fff;
+    @media screen and (min-width: $desktop) {
+        height: auto;
+        &__wrapper {
+            &.header__wrapper--active {
+                .header__wrapper-line {
+                    animation: expandLine 1s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: forwards;
+                }
+            }
+            &-line {
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: #cecece;
+                opacity: 0;
+            }
+        }
+        &__inner {
+            padding: 50px 0 29px;
+        }
+        &__menu {
+            display: block;
+        }
+        &__authentication {
+            display: flex;
+            &-link {
+                font-size: 1rem;
+                &:first-child {
+                    margin-right: 25px;
+                }
+            }
+        }
+        &__hamburger {
+            display: none;
+        }
+    }
+    &__container {
+        height: 100%;
+    }
+    &__wrapper {
+        height: 100%;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 20px 0;
+    }
+    &__menu {
+        display: none;
+    }
+    &__authentication {
+        display: none;
+    }
+}
+
+@keyframes expandLine {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
