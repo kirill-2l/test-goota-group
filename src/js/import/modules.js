@@ -1,6 +1,6 @@
 import "%components%/hamburger/hamburger";
 
-import "%modules%/main-carousel/main-carousel";
+import "%modules%/slider/slider";
 
 import "%modules%/m-menu/m-menu";
 import "%modules%/d-menu/d-menu";

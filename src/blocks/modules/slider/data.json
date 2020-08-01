@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "5f250dc6cb9e27a51a370e8e",
+    "title": "Подготовка спрайтов для анимации в Unity 5f250dc6ca5da855c74cc604",
+    "description": "Спрайты должны немного отличаться друг от друга, чтобы было заметно движение. 5f250dc6c9f651517535c5ec",
+    "link": "https://google.com",
+    "img": "img/content/main-carousel/slide_1.jpg)"
+  },
+  {
+    "_id": "5f250dc64eb8aa493e7c789f",
+    "title": "Подготовка спрайтов для анимации в Unity 5f250dc6249233ea2a237a90",
+    "description": "Спрайты должны немного отличаться друг от друга, чтобы было заметно движение. 5f250dc66e1d6cac1c859469",
+    "link": "https://google.com",
+    "img": "img/content/main-carousel/slide_2.jpg)"
+  },
+  {
+    "_id": "5f250dc64f9cca7f5c3cab83",
+    "title": "Подготовка спрайтов для анимации в Unity 5f250dc65212ef65c05f0c2f",
+    "description": "Спрайты должны немного отличаться друг от друга, чтобы было заметно движение. 5f250dc68d66220fee6a7fff",
+    "link": "https://google.com",
+    "img": "img/content/main-carousel/slide_3.jpg)"
+  },
+  {
+    "_id": "5f250dc6eade152021c200fc",
+    "title": "Подготовка спрайтов для анимации в Unity 5f250dc6bd2dea16c13f74af",
+    "description": "Спрайты должны немного отличаться друг от друга, чтобы было заметно движение. 5f250dc6f89821dcfd4c21a6",
+    "link": "https://google.com",
+    "img": "img/content/main-carousel/slide_2.jpg)"
+  },
+  {
+    "_id": "5f250dc654c869a393af6673",
+    "title": "Подготовка спрайтов для анимации в Unity 5f250dc676539bb722248dda",
+    "description": "Спрайты должны немного отличаться друг от друга, чтобы было заметно движение. 5f250dc6ddd1e905996034d2",
+    "link": "https://google.com",
+    "img": "img/content/main-carousel/slide_1.jpg)"
+  }
+]

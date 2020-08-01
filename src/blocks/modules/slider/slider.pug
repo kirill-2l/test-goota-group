@@ -1,0 +1,28 @@
+mixin slide(num)
+  a(href="https://google.com" style=`background-image: url(img/content/main-carousel/slide_${num}.jpg)`).glide__slide
+    .container
+      .main-slide
+        .main-slide__badge
+          .main-slide__badge-text Анимация
+        .main-slide__header
+          h2.main-slide__title Подготовка спрайтов для анимации в Unity
+        .main-slide__description Спрайты должны немного отличаться друг от друга, чтобы было заметно движение.
+
+
+
+section.sc.sc-main-carousel
+  #slider
+  //-   +slide(1)
+  //-   +slide(2)
+  //-   +slide(3)
+
+  //- .main-carousel__navigation.container
+
+  //-     svg.glide__arrow(data-glide-dir="<")
+  //-       use(href="img/sprites/sprite.svg#left-arrow")
+  //-     svg.glide__arrow(data-glide-dir=">")
+  //-       use(href="img/sprites/sprite.svg#right-arrow")
+
+  //-     button.glide__bullet(data-glide-dir='=0')
+  //-     button.glide__bullet(data-glide-dir='=1')
+  //-     button.glide__bullet(data-glide-dir='=2')

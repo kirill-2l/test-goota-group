@@ -1,0 +1,154 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  &__list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: margin-left linear 0.35s;
+  }
+  &__navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 100%;
+    padding: 0 10px;
+    transform: translateX(-50%);
+  }
+  &__arrows {
+    display: none;
+  }
+  &__arrow {
+    box-sizing: content-box;
+    width: 18px;
+    height: 15px;
+    padding: 5px;
+    transition: fill linear 0.3s;
+    fill: #fff;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+      fill: $blue;
+    }
+  }
+  &__bullets {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0 -12px;
+    padding: 10px 0;
+    transform: translateX(-50%);
+  }
+  &__bullet {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $lightGray;
+    margin: 0 12px;
+    border: none;
+    transition: background-color linear 0.15s;
+    cursor: pointer;
+    &.slider__bullet--active {
+      background-color: $blue;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &__navigation {
+      bottom: 50px;
+    }
+    &__arrows {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__arrow {
+      width: 32px;
+      height: 22px;
+    }
+    &__bullets {
+      margin: 0 -15px;
+    }
+    &__bullet {
+      width: 70px;
+      margin: 0 15px;
+    }
+  }
+}
+.slide {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 45% 20%;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    height: 100%;
+    padding: 30px 0 45px;
+    color: #fff;
+  }
+  &__badge {
+    display: block;
+    min-width: 75px;
+    padding: 7px 10px;
+    background-color: $blue;
+    &-text {
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  &__header {
+    margin-top: 15px;
+  }
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__description {
+    margin-top: 10px;
+    font-size: 1.4rem;
+  }
+  @media screen and (min-width: $landscape) {
+    &__content {
+      max-width: 80%;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &__content {
+      max-width: 780px;
+      padding: 115px 0 75px;
+      min-height: 600px;
+    }
+    &__badge {
+      font-size: rem(14);
+    }
+    &__header {
+      margin-top: 30px;
+    }
+    &__title {
+      font-size: rem(46);
+    }
+    &__description {
+      max-width: 85%;
+      margin-top: 20px;
+      font-size: rem(24);
+    }
+  }
+}
