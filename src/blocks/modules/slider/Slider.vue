@@ -51,6 +51,7 @@ const initialState = {
   currentIndex: 0,
   slidesNum: 0,
   delay: 3000,
+  autoPlayInterval: null,
 };
 
 export default {
@@ -72,7 +73,8 @@ export default {
         : (this.currentIndex = 0);
     },
     autoPlay() {
-      setInterval(() => {
+      clearInterval(this.autoPlayInterval);
+      this.autoPlayInterval = setInterval(() => {
         this.incrementCurrentIndex();
       }, this.delay);
     },
@@ -81,11 +83,14 @@ export default {
       this.currentIndex = index;
     },
   },
+  watch: {
+    currentIndex: {
+      handler: "autoPlay",
+      immediate: true,
+    },
+  },
   beforeMount() {
     this.sliderInit();
-  },
-  mounted() {
-    this.autoPlay();
   },
 };
 </script>
